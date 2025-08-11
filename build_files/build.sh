@@ -16,3 +16,6 @@ dnf5 -y install mpv
 dnf5 -y copr enable wezfurlong/wezterm-nightly
 dnf5 -y install wezterm
 dnf5 -y copr disable wezfurlong/wezterm-nightly
+
+# nix
+mkdir /nix
