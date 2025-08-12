@@ -1,43 +1,4 @@
-# image-template
-
-# Purpose
-
-This repository is meant to be a template for building your own custom [bootc](https://github.com/bootc-dev/bootc) image. This template is the recommended way to make customizations to any image published by the Universal Blue Project:
-- Products: [Aurora](https://getaurora.dev/), [Bazzite](https://bazzite.gg/), [Bluefin](https://projectbluefin.io/), [uCore](https://projectucore.io/)
-- Base images: [main](https://github.com/ublue-os/main/) - the product images build on these and may be a better starting point depending on what you want. 
-
-or any other base image if you want to start from scratch:
-
-- Fedora: `quay.io/fedora/fedora-bootc:41`
-- CentOS Stream 10: `quay.io/centos-bootc/centos-bootc:stream10`
-
-This template includes a Containerfile and a Github workflow for building the container image, signing, and proper metadata to be listed on [artifacthub](https://artifacthub.io/). As soon as the workflow is enabled in your repository, it will build the container image and push it to the Github Container Registry.
-
-# Prerequisites
-
-Working knowledge in the following topics:
-
-- Containers
-  - https://www.youtube.com/watch?v=SnSH8Ht3MIc
-  - https://www.mankier.com/5/Containerfile
-- bootc
-  - https://bootc-dev.github.io/bootc/
-- Fedora Silverblue (and other Fedora Atomic variants)
-  - https://docs.fedoraproject.org/en-US/fedora-silverblue/
-- Github Workflows
-  - https://docs.github.com/en/actions/using-workflows
-
-# Video Tutorial
-
-TesterTech has made a tutorial video, check it out: 
-
-[![Video Tutorial](https://img.youtube.com/vi/IxBl11Zmq5w/0.jpg)](https://www.youtube.com/watch?v=IxBl11Zmq5wE)
-
 # How to Use
-
-## Template
-
-Select `Use this Template` and create a new repository from it. To enable the workflows, you may need to go the `Actions` tab of the new repository and click to enable workflows.
 
 ## Containerfile
 
@@ -109,10 +70,6 @@ This provides users a method of verifying the image.
 
 4. Commit the `cosign.pub` file to the root of your git repository.
 
-# Community
-
-- [**bootc discussion forums**](https://github.com/bootc-dev/bootc/discussions) - Nothing in this template is ublue specific, the upstream bootc project has a discussions forum where custom image builders can hang out and ask questions.
-
 ## Artifacthub
 
 This template comes with the necessary tooling to index your image on [artifacthub.io](https://artifacthub.io), use the `artifacthub-repo.yml` file at the root to verify yourself as the publisher. This is important to you for a few reasons:
@@ -120,9 +77,6 @@ This template comes with the necessary tooling to index your image on [artifacth
 - The value of artifacthub is it's one place for people to index their custom images, and since we depend on each other to learn, it helps grow the community. 
 - You get to see your pet project listed with the other cool projects in Cloud Native.
 - Since the site puts your README front and center, it's a good way to learn how to write a good README, learn some marketing, finding your audience, etc. 
-
-[Discussion thread](https://universal-blue.discourse.group/t/listing-your-custom-image-on-artifacthub/6446)
-
 
 ### Justfile Documentation
 
@@ -269,10 +223,3 @@ Runs shell check on all Bash scripts.
 
 Runs shfmt on all Bash scripts.
 
-## Community Examples
-
-- [m2Giles' OS](https://github.com/m2giles/m2os)
-- [bOS](https://github.com/bsherman/bos)
-- [Homer](https://github.com/bketelsen/homer/)
-- [Amy OS](https://github.com/astrovm/amyos)
-- [VeneOS](https://github.com/Venefilyn/veneos)
