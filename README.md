@@ -1,3 +1,12 @@
+# What Is This
+My personal version Atomic Fedora, built on Bazzite. 
+
+Comes with:
+1. `/nix` folder to install nix with
+2. Wezterm
+3. mpv
+
+
 # How to Use
 
 ## Switch
@@ -28,15 +37,6 @@ This workflow creates an ISO from your OCI image by utilizing the [bootc-image-b
 
 - Modify `iso.toml` to point to your custom image before generating an ISO.
 - If you changed your image name from the default in `build.yml` then in the `build-iso.yml` file edit the `IMAGE_REGISTRY` and `DEFAULT_TAG` environment variables with the correct values. If you did not make changes, skip this step.
-- Finally, if you want to upload your ISOs to S3 then you will need to add your S3 configuration to the repository's Action secrets. This can be found by going to your repository settings, under `Secrets and Variables` -> `Actions`. You will need to add the following
-  - `S3_PROVIDER` - Must match one of the values from the [supported list](https://rclone.org/s3/)
-  - `S3_BUCKET_NAME` - Your unique bucket name
-  - `S3_ACCESS_KEY_ID` - It is recommended that you make a separate key just for this workflow
-  - `S3_SECRET_ACCESS_KEY` - See above.
-  - `S3_REGION` - The region your bucket lives in. If you do not know then set this value to `auto`.
-  - `S3_ENDPOINT` - This value will be specific to the bucket as well.
-
-Once the workflow is done, you'll find it either in your S3 bucket or as part of the summary under `Artifacts` after the workflow is completed.
 
 #### Container Signing
 
