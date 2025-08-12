@@ -1,5 +1,8 @@
 # How to Use
 
+## Switch
+`sudo bootc switch ghcr.io/chuakid/emiya`
+
 ## Containerfile
 
 This file defines the operations used to customize the selected image. It contains examples of possible modifications, including how to:
