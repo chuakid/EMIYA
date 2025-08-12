@@ -10,12 +10,15 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # install mpv
-dnf5 -y install mpv
+dnf -y install mpv
 
 # install wezterm
-dnf5 -y copr enable wezfurlong/wezterm-nightly
-dnf5 -y install wezterm
-dnf5 -y copr disable wezfurlong/wezterm-nightly
+dnf -y copr enable wezfurlong/wezterm-nightly
+dnf -y install wezterm
+dnf -y copr disable wezfurlong/wezterm-nightly
+
+# install wine
+dnf -y install wine
 
 # nix
 mkdir /nix
